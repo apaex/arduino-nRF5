@@ -21,6 +21,59 @@ menu.version=Version
 menu.lfclk=Low Frequency Clock
 menu.board_variant=Board Variant
 
+
+# nRF52810 variants
+###################
+
+Generic_nRF52810.name=Generic nRF52810
+
+Generic_nRF52810.upload.tool=sandeepmistry:openocd
+Generic_nRF52810.upload.target=nrf52
+Generic_nRF52810.upload.maximum_size=196608
+Generic_nRF52810.upload.maximum_data_size=24576
+
+Generic_nRF52810.bootloader.tool=sandeepmistry:openocd
+
+Generic_nRF52810.build.mcu=cortex-m4
+Generic_nRF52810.build.f_cpu=16000000
+Generic_nRF52810.build.board=GENERIC
+Generic_nRF52810.build.core=nRF5
+Generic_nRF52810.build.variant=Generic
+Generic_nRF52810.build.variant_system_lib=
+Generic_nRF52810.build.extra_flags=-DNRF52810_XXAA -DNRF52
+Generic_nRF52810.build.float_flags=
+Generic_nRF52810.build.ldscript=nrf52810_xxaa.ld
+
+Generic_nRF52810.menu.softdevice.none=None
+Generic_nRF52810.menu.softdevice.none.softdevice=none
+Generic_nRF52810.menu.softdevice.none.softdeviceversion=
+
+Generic_nRF52810.menu.softdevice.s112=S112
+Generic_nRF52810.menu.softdevice.s112.softdevice=s112
+Generic_nRF52810.menu.softdevice.s112.softdeviceversion=7.2.0
+Generic_nRF52810.menu.softdevice.s112.upload.maximum_size=94208
+Generic_nRF52810.menu.softdevice.s112.build.extra_flags=-DNRF52810_XXAA -DNRF52 -DS112
+Generic_nRF52810.menu.softdevice.s112.build.ldscript=armgcc_s112_nrf52810_xxaa.ld
+
+Generic_nRF52810.menu.softdevice.s113=S113
+Generic_nRF52810.menu.softdevice.s113.softdevice=s113
+Generic_nRF52810.menu.softdevice.s113.softdeviceversion=7.2.0
+Generic_nRF52810.menu.softdevice.s113.upload.maximum_size=196608
+Generic_nRF52810.menu.softdevice.s113.build.extra_flags=-DNRF52810_XXAA -DNRF52 -DS113
+Generic_nRF52810.menu.softdevice.s113.build.ldscript=armgcc_s113_nrf52810_xxaa.ld
+
+Generic_nRF52810.menu.lfclk.lfxo=Crystal Oscillator
+Generic_nRF52810.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+Generic_nRF52810.menu.lfclk.lfrc=RC Oscillator
+Generic_nRF52810.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+Generic_nRF52810.menu.lfclk.lfsynt=Synthesized
+Generic_nRF52810.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
+
+
+
+
+
+
 # nRF52833 variants
 ###################
 

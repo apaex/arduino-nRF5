@@ -31,8 +31,10 @@ static uint32_t saadcGain      = SAADC_CH_CONFIG_GAIN_Gain1_5;
 
 static NRF_PWM_Type* pwms[PWM_COUNT] = {
   NRF_PWM0,
+#if PWM_COUNT > 1
   NRF_PWM1,
   NRF_PWM2,
+#endif
 #if PWM_COUNT > 3
   NRF_PWM3
 #endif
@@ -40,8 +42,10 @@ static NRF_PWM_Type* pwms[PWM_COUNT] = {
 
 static uint32_t pwmChannelPins[PWM_COUNT] = {
   0xFFFFFFFF,
+#if PWM_COUNT > 1
   0xFFFFFFFF,
   0xFFFFFFFF,
+#endif
 #if PWM_COUNT > 3
   0xFFFFFFFF,
 #endif
