@@ -1,0 +1,6 @@
+{
+    "name": "framework-arduinonordicnrf5",
+    "description": "Nordic Semiconductor nRF5 Boards",
+    "url": "https://github.com/apaex/arduino-nRF5",
+    "version": "0.8.0"
+}
