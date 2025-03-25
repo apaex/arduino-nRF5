@@ -73,6 +73,16 @@ void loop( void ) ;
 #undef abs
 #endif // abs
 
+// undefine stdlib's max if encountered
+#ifdef max
+#undef max
+#endif // max
+
+// undefine stdlib's min if encountered
+#ifdef min
+#undef min
+#endif // min
+
 #define min(a,b) ((a)<(b)?(a):(b))
 #define max(a,b) ((a)>(b)?(a):(b))
 #define abs(x) ((x)>0?(x):-(x))
